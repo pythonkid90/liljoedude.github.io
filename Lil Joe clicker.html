@@ -1,0 +1,81 @@
+
+<style>
+#main {
+  padding: 10px;
+  text-align: center;
+  font-size: 100px;
+  text-color: white;
+  font: "Fira Sans", sans-serif;
+}
+#b {
+ width: 150px;
+ hight: 100px;
+ padding: 10px;
+ text-align: center;
+}
+#c {
+ background-image: url('Joe (1).gif');
+ width: 338px;
+ height: 134;
+ padding: 10px;
+ right: 50%;
+}
+.default-1 {
+width: 338;
+height: 134;
+background-image: url('Joe (1).gif');
+border: 5px soild #ccff99;
+border-radius: 5%;
+cursor: pointer;
+align: center;
+}
+
+.default-1:hover {
+filter: brightness(1.2);
+width: 338;
+height: 134;
+border: 5px soild #99ccff;
+border-radius: 5%;
+}
+</style>
+<script>
+let joes = 0;
+let CPC1 = 1;
+let CPS1 = 0;
+function UPc(CPC) {
+ if(joes > (CPC * 100)) {
+ CPC1 += CPC
+ joes -= (CPC * 100)
+ const text = document.getElementById("para");
+ text.innerHTML = joes;
+} else {
+alert(joes)
+alert(CPC1)
+}
+}
+function UPs(CPS) {
+ if(joes > (CPS * 200)) {
+ CPS1 =+ CPS
+ joes -= (CPS * 200)
+ const text = document.getElementById("para");
+ text.innerHTML = joes;
+} else {
+alert("You have an isuffishent amount of Li'l Joey Joes")
+}
+}
+function Click(x) {
+ joes += CPC1
+ const text = document.getElementById("para");
+ text.innerHTML = joes;
+}
+</script>
+
+<h1 id="para">0</h1>
+<h1>Joes</h1>
+<button class="default-1" onclick="Click();"></button>
+<br/>
+<button id="b" onclick="UPc(1);">CPC +1: costs 100 joes</button>
+<button id="b" onclick="UPc(5);">CPC +5: costs 500 joes</button>
+<br/>
+<button id="b" onclick="UPs(1);">CPS +1: costs 200 joes</button>
+<button id="b" onclick="UPs(5);">CPS +5: costs 1000 joes</button>
