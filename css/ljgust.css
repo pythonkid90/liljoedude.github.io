@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+h1 {
+    border: 5px solid var(--color1);
+    font-size: 67px;
+    text-align: center;
+    color: black;
+}
+h1 span {
+    font-size: 80px;
+    color: grey;
+}
+h1 img {
+    display: inline-flex;
+    justify-self: center;
+    border-radius: 20px;
+}
+header > p {
+    padding: 1rem;
+    border-radius: 20px;
+    font: bold 2rem;
+    background: var(--color2);
+    border: 5px solid var(--color1);
+    text-align: center;
+}
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 250px;
+}
+.game-card {
+    border: 5px solid var(--color1);
+    width: 338px;
+    border-radius: 5%;
+    box-shadow: 4px 8px #9999cc;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.game-title {
+    font: bold 1rem sans-serif;
+    background: var(--color2);
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}

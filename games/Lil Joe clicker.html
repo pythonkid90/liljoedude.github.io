@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/joeclicker.css">
+
+  <title>Joe Clicker</title>
+</head>
+<body>
+  <h1><span id="para">0</span> Joes</h1>
+
+  <button class="default-1" onclick="Click();"></button>
+  <br>
+  <button id="b" onclick="UPc(1);">CPC +1: costs 100 joes</button>
+  <button id="b" onclick="UPc(5);">CPC +5: costs 500 joes</button>
+  <br>
+  <button id="b" onclick="UPs(1);">CPS +1: costs 200 joes</button>
+  <button id="b" onclick="UPs(5);">CPS +5: costs 1000 joes</button>
+</body>
+</html>
+
+<script>
+let joes = 0;
+let CPC1 = 1;
+let CPS1 = 0;
+function UPc(CPC) {
+ if(joes > (CPC * 100)) {
+ CPC1 += CPC
+ joes -= (CPC * 100)
+ const text = document.getElementById("para");
+ text.innerHTML = joes;
+} else {
+alert(joes)
+alert(CPC1)
+}
+}
+function UPs(CPS) {
+ if(joes > (CPS * 200)) {
+ CPS1 =+ CPS
+ joes -= (CPS * 200)
+ const text = document.getElementById("para");
+ text.innerHTML = joes;
+} else {
+alert("You have an isuffishent amount of Li'l Joey Joes")
+}
+}
+function Click(x) {
+ joes += CPC1
+ const text = document.getElementById("para");
+ text.innerHTML = joes;
+}
+</script>
+
+
