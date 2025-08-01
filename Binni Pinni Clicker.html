@@ -1,5 +1,4 @@
 <body style="background-color: #ffffde;">
-<a>joe.com</a>
 <title>Google Classroom</title>
 <button style="
 background-image: url('Imgs/Music.png');
@@ -8,6 +7,13 @@ height: 70px;
 cursor: mouse;
 border: none;
 " onclick="Music();"></button>
+  <button style="
+background-image: url('Imgs/Music.png');
+width: 50px;
+height: 70px;
+cursor: mouse;
+border: none;
+" onclick="Music2();"></button>
 <div style="
 display: flex;
 justify-content: center;
@@ -52,6 +58,7 @@ const elem3 = document.getElementById("text3");
 const title1 = document.getElementById("title");
 const click = new Audio("Sounds/click.mp3");
 const bgm = new Audio("Sounds/winstonsong.mp3");
+const bgm2 = new Audio("Sounds/Jazzy_Note_Blocks.mp3");
 let banis = 0;
 let banpow = 1;
 let banpows = 0
@@ -63,8 +70,14 @@ click.play();
 elem1.innerHTML = "you have: " + banis + " baninis";
 } 
 function Music() {
+bgm2.pause();
 bgm.play();
 bgm.loop = true;
+}
+  function Music2() {
+bgm.pause();
+bgm2.play();
+bgm2.loop = true;
 }
 function bpc(add, cost) {
 if(banis > (cost - 1)) {
